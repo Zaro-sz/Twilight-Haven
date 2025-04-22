@@ -6,53 +6,57 @@
     <title>Twilight Haven</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./Images/icon-sl.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-lang="pt-br">
     <header>
-        <div class="logo">
-            <h1>ZaroVerse</h1>
-        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
+                <li><a href="#buy">Baixar</a></li>
                 <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#buy">Comprar</a></li>
             </ul>
         </nav>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="pt-br">PT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
     </header>
     <section id="home" class="hero">
         <div class="hero-content">
             <img src="./Images/Logo.png" alt="Logo do jogo" class="hero-logo">
+            <p class="development-text" data-lang-key="development">
+                Twilight Haven está em fase de desenvolvimento. Estamos trabalhando para trazer uma experiência única de narrativa e conexão humana. Fique ligado para atualizações!
+            </p>
         </div>
     </section>
     <section id="about" class="section">
-        <h2>"Bem-vindo, sente-se e relaxe."</h2>
+        <h2 data-lang-key="about-title">"Bem-vindo, sente-se e relaxe."</h2>
         <div class="content-block">
             <div class="text-block">
-                <p><strong>Desenvolvido por ZaroVerse</strong></p>
-                <p>
+                <p data-lang-key="about-p1">
                     Em Twilight Haven, você joga como o único proprietário e barman de um pequeno bar que abre apenas à noite, localizado em uma rua tranquila de uma metrópole conhecida como a “Capital do Mundo”, Luminance. Ao longo de suas noites, você receberá uma variedade de clientes de diferentes raças e etnias, cada um trazendo consigo suas próprias histórias, desafios e desejos. Como protagonista, você terá a oportunidade de ouvir, aconselhar e interagir com essas pessoas, enquanto prepara bebidas que refletem suas personalidades e emoções.
                 </p>
-                <p>
-                    À medida que as noites passam, suas escolhas nas interações moldarão suas relações e o ambiente do bar. O que você diz — ou não diz — pode aproximar as pessoas ou afastá-las, e até mudar suas vidas de maneiras inesperadas.
-                    Twilight Haven é um jogo sobre conexões humanas, escolhas significativas e o poder de uma conversa sincera em meio à correria da vida moderna.
+                <p data-lang-key="about-p2">
+                    À medida que as noites passam, suas escolhas nas interações moldarão suas relações e o ambiente do bar. O que você diz — ou não diz — pode aproximar as pessoas ou afastá-las, e até mudar suas vidas de maneiras inesperadas. Twilight Haven é um jogo sobre conexões humanas, escolhas significativas e o poder de uma conversa sincera em meio à correria da vida moderna.
                 </p>
             </div>
         </div>
     </section>
     <section id="buy" class="section">
-        <h2>Demo Disponível</h2>
+        <h2 data-lang-key="buy-title">Demo Disponível</h2>
         <div class="buy-grid">
             <div class="buy-item">
                 <img src="./Images/icon.png" alt="Comprar">
-                <p>Baixar Twilight Haven</p>
-                <a href="https://zaroverse.itch.io/twilight-haven" class="btn">Baixe Agora</a>
+                <p data-lang-key="buy-text">Baixar Twilight Haven</p>
+                <a href="https://zaroverse.itch.io/twilight-haven" class="btn" data-lang-key="buy-btn">Baixe Agora</a>
             </div>
         </div>
     </section>
     <section id="gallery" class="section">
-        <h2>Screenshots</h2>
+        <h2 data-lang-key="gallery-title">Screenshots</h2>
         <div class="gallery-grid">
             <img src="./Images/screen shot 1.png" alt="Screenshot 1" class="gallery-img">
             <img src="./Images/screen shot 2.png" alt="Screenshot 2" class="gallery-img">
@@ -61,31 +65,17 @@
         </div>
     </section>
     <footer>
-        <p>© 2025 ZaroVerse. Todos os direitos reservados.</p>
+        <p data-lang-key="footer-text">© 2025 ZaroVerse. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://twitter.com/zaroverse" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/zaroverse" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://zaroverse.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
+        </div>
     </footer>
     <div id="imageModal" class="modal">
         <span class="close">×</span>
         <img id="modalImage" src="" alt="Imagem ampliada">
     </div>
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.close');
-        const galleryImages = document.querySelectorAll('.gallery-img');
-        galleryImages.forEach(img => {
-            img.addEventListener('click', function() {
-                modal.style.display = 'flex';
-                modalImg.src = this.src;
-            });
-        });
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
