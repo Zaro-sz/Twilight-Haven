@@ -61,7 +61,7 @@ document.querySelectorAll('.lang-btn').forEach(button => {
 });
 
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.section h2, .text-block p, .buy-item p, footer p, .development-text');
+    const elements = document.querySelectorAll('.section h2, .text-block p, .buy-item p, footer p, .buy-item, .gallery-img');
     elements.forEach(element => {
         const rect = element.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.8) {

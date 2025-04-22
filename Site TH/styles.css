@@ -33,29 +33,6 @@ header {
     z-index: 10;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    color: #e0d6ff;
-    text-decoration: none;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #8a4af3;
-    transform: scale(1.1);
-}
-
 .lang-switcher {
     display: flex;
     gap: 10px;
@@ -82,6 +59,29 @@ nav ul li a:hover {
     transform: scale(0.95);
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #e0d6ff;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8a4af3;
+    transform: scale(1.1);
+}
+
 .hero {
     height: 100vh;
     background: linear-gradient(to bottom, rgba(26, 13, 38, 0) 0%, rgba(26, 13, 38, 0) 70%, #1a0d26 100%),
@@ -100,22 +100,6 @@ nav ul li a:hover {
     width: 850px;
     height: auto;
     margin-bottom: 20px;
-}
-
-.development-text {
-    font-size: 20px;
-    color: #b58eff;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.development-text.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .section {
@@ -182,6 +166,14 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: center;
     max-width: 250px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.buy-item.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .buy-item img {
@@ -195,8 +187,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
     font-size: 24px;
     font-family: 'm5x7', 'Press Start 2P', sans-serif;
-    text-align: justify;
-    text-indent: 40px;
+    text-align: center;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -244,6 +235,14 @@ nav ul li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     object-fit: cover;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-grid img.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
@@ -290,6 +289,10 @@ footer p.animate {
         padding: 10px;
     }
 
+    .lang-switcher {
+        margin-bottom: 10px;
+    }
+
     nav ul {
         margin-top: 10px;
     }
@@ -298,24 +301,8 @@ footer p.animate {
         margin: 0 10px;
     }
 
-    .lang-switcher {
-        margin-top: 10px;
-    }
-
-    .logo h1 {
-        font-size: 30px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
     .hero-logo {
         width: 200px;
-    }
-
-    .development-text {
-        font-size: 16px;
     }
 
     .section h2 {
