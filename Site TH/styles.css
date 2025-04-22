@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'm5x7';
+    src: url('./fonts/m5x7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'm5x7', Arial, sans-serif;
     line-height: 1.6;
     color: #e0d6ff;
     background-color: #1a0d26;
@@ -24,8 +31,9 @@ header {
 }
 
 .logo h1 {
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
+    font-family: 'm5x7', sans-serif;
 }
 
 nav ul {
@@ -40,8 +48,9 @@ nav ul li {
 nav ul li a {
     color: #e0d6ff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
+    font-family: 'm5x7', sans-serif;
 }
 
 nav ul li a:hover {
@@ -79,9 +88,10 @@ nav ul li a:hover {
 }
 
 .section h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 30px;
     color: #b58eff;
+    font-family: 'm5x7', sans-serif;
 }
 
 .content-block {
@@ -95,25 +105,15 @@ nav ul li a:hover {
 }
 
 .text-block {
-    max-width: 400px;
-    text-align: left;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .text-block p {
+    font-size: 20px;
     margin-bottom: 15px;
-}
-
-.gallery-preview {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery-preview img {
-    width: 180px;
-    height: auto;
-    border-radius: 5px;
+    font-family: 'm5x7', sans-serif;
 }
 
 .buy-grid {
@@ -140,6 +140,7 @@ nav ul li a:hover {
 
 .buy-item p {
     margin-bottom: 10px;
+    font-family: 'm5x7', sans-serif;
 }
 
 .btn {
@@ -150,6 +151,7 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
+    font-family: 'm5x7', sans-serif;
 }
 
 .btn:hover {
@@ -158,9 +160,9 @@ nav ul li a:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -168,6 +170,7 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -175,7 +178,8 @@ footer {
     color: #e0d6ff;
     text-align: center;
     padding: 20px;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: 'm5x7', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -207,9 +211,5 @@ footer {
 
     .text-block {
         text-align: center;
-    }
-
-    .gallery-preview {
-        flex-direction: column;
     }
 }
