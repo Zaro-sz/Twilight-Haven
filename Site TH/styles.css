@@ -4,28 +4,19 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'm5x7';
-    src: url('./fonts/m5x7.woff2') format('woff2'),
-         url('./fonts/m5x7.woff') format('woff'),
-         url('./fonts/m5x7.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: 'm5x7', 'Press Start 2P', Arial, sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     line-height: 1.6;
     color: #e0d6ff;
     background-color: #1a0d26;
-    font-size: 24px;
+    font-size: 14px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 8px 15px;
     background-color: #2b1d3d;
     position: fixed;
     width: 100%;
@@ -35,18 +26,18 @@ header {
 
 .lang-switcher {
     display: flex;
-    gap: 10px;
+    gap: 6px;
 }
 
 .lang-btn {
     background-color: #8a4af3;
     color: #fff;
     border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-family: 'Press Start 2P', sans-serif;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -65,15 +56,15 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 12px;
 }
 
 nav ul li a {
     color: #e0d6ff;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 12px;
     text-transform: uppercase;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -97,21 +88,21 @@ nav ul li a:hover {
 }
 
 .hero-logo {
-    width: 850px;
+    width: 700px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .section {
-    padding: 50px 20px;
+    padding: 30px 10px;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 52px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 15px;
     color: #b58eff;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -123,49 +114,63 @@ nav ul li a:hover {
 }
 
 .content-block {
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .text-block {
-    max-width: 600px;
-    text-align: justify;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
 
-.text-block p {
-    font-size: 30px;
-    margin-bottom: 15px;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
-    text-indent: 40px;
+.column {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.column p {
+    font-size: 11px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', sans-serif;
+    color: #e0d6ff;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.text-block p.animate {
+.column p.animate {
     opacity: 1;
     transform: translateY(0);
 }
 
+.column-title {
+    font-size: 12px;
+    color: #e0d6ff;
+    margin-bottom: 8px;
+}
+
 .buy-grid {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .buy-item {
     background-color: #2b1d3d;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 4px;
     text-align: center;
-    max-width: 250px;
+    max-width: 180px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -179,15 +184,16 @@ nav ul li a:hover {
 .buy-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 4px;
+    margin-bottom: 6px;
 }
 
 .buy-item p {
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-family: 'Press Start 2P', sans-serif;
     text-align: center;
+    color: #e0d6ff;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -200,20 +206,20 @@ nav ul li a:hover {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 6px 12px;
     background-color: #8a4af3;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: 'Press Start 2P', sans-serif;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
     background-color: #6b38c2;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(138, 74, 243, 0.7);
+    box-shadow: 0 0 8px rgba(138, 74, 243, 0.7);
 }
 
 .btn:active {
@@ -223,16 +229,16 @@ nav ul li a:hover {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1200px;
+    gap: 12px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .gallery-grid img {
     width: 100%;
-    height: 400px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     object-fit: cover;
     opacity: 0;
@@ -249,9 +255,9 @@ footer {
     background-color: #2b1d3d;
     color: #e0d6ff;
     text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-family: 'm5x7', 'Press Start 2P', sans-serif;
+    padding: 12px;
+    font-size: 12px;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 footer p {
@@ -266,15 +272,15 @@ footer p.animate {
 }
 
 .social-links {
-    margin-top: 10px;
+    margin-top: 6px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
 }
 
 .social-links a {
     color: #e0d6ff;
-    font-size: 24px;
+    font-size: 16px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -286,60 +292,137 @@ footer p.animate {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 10px;
+        padding: 6px;
     }
 
     .lang-switcher {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     nav ul {
-        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 6px;
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 4px 6px;
+    }
+
+    nav ul li a {
+        font-size: 10px;
+    }
+
+    .lang-btn {
+        font-size: 9px;
+        padding: 4px 6px;
     }
 
     .hero-logo {
-        width: 200px;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .section {
+        padding: 20px 8px;
     }
 
     .section h2 {
-        font-size: 44px;
-    }
-
-    .text-block p {
-        font-size: 26px;
-    }
-
-    .buy-item p {
-        font-size: 22px;
-    }
-
-    .btn {
-        font-size: 18px;
-    }
-
-    footer {
-        font-size: 22px;
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .content-block {
-        flex-direction: column;
-        text-align: justify;
+        max-width: 90%;
+        gap: 12px;
     }
 
     .text-block {
-        text-align: justify;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .column p {
+        font-size: 10px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .column-title {
+        font-size: 10px;
+    }
+
+    .buy-item {
+        max-width: 160px;
+        padding: 8px;
+    }
+
+    .buy-item p {
+        font-size: 10px;
+    }
+
+    .btn {
+        font-size: 9px;
+        padding: 5px 10px;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 8px;
+        max-width: 90%;
     }
 
     .gallery-grid img {
-        height: 300px;
+        height: 150px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .social-links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section h2 {
+        font-size: 18px;
+    }
+
+    .column p {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+    .column-title {
+        font-size: 9px;
+    }
+
+    .buy-item {
+        max-width: 140px;
+    }
+
+    .buy-item p {
+        font-size: 9px;
+    }
+
+    .btn {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    .gallery-grid img {
+        height: 120px;
+    }
+
+    footer {
+        font-size: 9px;
+    }
+
+    .social-links a {
+        font-size: 12px;
     }
 }
 
@@ -359,15 +442,15 @@ footer p.animate {
 .modal img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 12px;
+    right: 15px;
     color: #fff;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
 }
